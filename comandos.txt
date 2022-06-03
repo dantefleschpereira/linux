@@ -1,0 +1,115 @@
+Linux
+
+CONTROLE DE USUÁRIOS, GRUPOS E PERMISSÕES
+
+Adicionar usuário:
+sudo adduser nomedousuario
+
+Trocar usuário:
+su nomedousuario
+
+Alterar senha do usuário:
+passwd nomedousuario
+
+Exibir informações de login dos usuários:
+lastlog
+
+Exibir uma listagem de entrada e saída do usuário no sistema:
+last
+
+Exibir o nome do usuário atual logado no sistema:
+logname
+
+Exibir todos os identificadores do usuário:
+id
+
+Exibir todos os usuários:
+cat /etc/passwd
+cat /etc/passwd | more
+
+Remover um usuário e a pasta pessoal do usuário:
+sudo userdel -r nomedousuario
+
+Exibir todos os grupos do sistema:
+cat /etc/group
+
+Exibir todos os grupos de um usário:
+groups
+
+Criar um grupo:
+sudo addgroup nomedogrupo
+
+Adicionar um usuário a um grupo:
+sudo adduser usuanomedousuário nomedogrupo/// sudo gpasswd -a usuário grupo
+
+Remover um usuário de um grupo:
+sudo gpassws -d nomedousuário nomedogrupo
+
+Remover um grupo:
+sudo groupdel nomedogrupo
+
+Permissões:
+r read 2
+w write 4
+x execution 1
+ 
+Verificar permissões em um diretório:
+ls -lh
+
+Mudar a permissão de um arquivo ou diretório: (modo octal)
+chmod 200 file.txt
+
+gzip - compactador de arquivos:
+gzip arquivo.txt (gzip -9 arquivo.txt //usa a compactação máxima)
+gunzip arquivo.txt.gz
+
+zip - compactador de arquivos:
+zip arquivo.zip arquivo.txt
+zip arquivos.zip arquivo1.txt arquivo2.txt (incluir outros arquivos no mesmo zip)
+unzip arquivo.zip
+
+bzip2 - compactador de arquivos:
+bzip2 arquivo.txt
+bzip2 -d arquivo.bz2
+
+rar - compactador de arquivos:
+sudo apt install rar
+rar a arquivo.rar aula.txt
+rar x arquivo.rar
+
+tar é um arquivador 
+tar -cf aularedes.txt.tar aularedes.txt arquivo.txt history(pasta)
+gzip arquivos.tar (para compactar)
+tar -xvf aularedes.txt.tar.gz (descompactar e tirar do arquivamento)
+tar -xvf arquivos.tar.gz -C ~/Documentos (~pasta pessoal /Documentos)
+
+Remover arquivos:
+rm arquivo.txt
+
+Criar novos arquivos em branco:
+touch teste.txt
+
+mkdir File && cd File
+criar pasta File e abrir a pasta
+
+
+
+Comando cat
+cat file.text visualizar o conteúdo de um arquivo
+cat > filename cria um novo arquivo
+
+
+Comando cd
+cd ~  Ir para a home do usuário atual
+cd .. Subir um diretório / Voltar um diretório
+cd — Voltar para o diretório anterior
+cd /var/log/  Mudança entre diretórios
+
+Comando ls
+ls é usado para visualizar conteúdos em um diretório
+ls -R vai listar todos os arquivos nos subdiretórios
+ls -a vai mostrar todos os arquivos ocultos
+ls -al vai listar todos os arquivos e diretórios com informações detalhadas como permissões, tamanho, proprietário, etc.
+
+Desligar:
+shutdown -h now
