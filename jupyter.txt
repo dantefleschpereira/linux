@@ -1,0 +1,7 @@
+Instalar Jypter - Linux
+sudo apt-get update
+sudo apt-get install python3-pip python3-dev
+sudo su
+pip3 install jupyter
+jupyter notebook
+
